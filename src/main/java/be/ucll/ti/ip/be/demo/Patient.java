@@ -14,7 +14,7 @@ public class Patient {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
-    @NotBlank(message = "Name is mandatory")
+    @NotBlank(message = "name.is.missing")
     private String name;
 
     @NotBlank(message = "email.is.missing")
