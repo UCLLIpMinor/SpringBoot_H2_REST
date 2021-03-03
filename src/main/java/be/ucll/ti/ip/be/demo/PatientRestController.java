@@ -2,10 +2,7 @@ package be.ucll.ti.ip.be.demo;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
-import org.springframework.validation.BindingResult;
 import org.springframework.validation.FieldError;
-import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.server.ResponseStatusException;
@@ -27,8 +24,7 @@ public class PatientRestController {
     }
 
     @PostMapping("/add")
-    public Iterable<Patient> addPatient(@Valid @RequestBody Patient patient)
-    {
+    public Iterable<Patient> addPatient(@Valid @RequestBody Patient patient) {
         try {
             patientService.add(patient);
         }
